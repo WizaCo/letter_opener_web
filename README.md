@@ -89,9 +89,11 @@ end
 
 ### Using on Heroku / Multi-Machine Environments
 
-For Heroku or other multi-machine/multi-dyno environments, use the Redis storage backend:
+For Heroku or other multi-machine/multi-dyno environments, use alternative storage backends:
 
-**[letter_opener_web-redis](https://github.com/WizaCo/letter_opener_web-redis)** - Stores emails in Redis instead of the filesystem, making it work seamlessly across multiple dynos/machines and with background jobs.
+**[letter_opener_web-redis](https://github.com/WizaCo/letter_opener_web-redis)** - Stores emails in Redis.
+
+**[letter_opener_web-s3](https://github.com/WizaCo/letter_opener_web-s3)** - Stores emails in Amazon S3.
 
 ## Acknowledgements
 
