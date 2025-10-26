@@ -2,11 +2,16 @@
 
 require 'letter_opener_web/version'
 require 'letter_opener_web/engine'
+require 'letter_opener_web/letter_interface'
 require 'rexml/document'
 
 module LetterOpenerWeb
   class Config
-    attr_accessor :letters_location
+    attr_accessor :letters_location, :letter_class
+
+    def initialize
+      @letter_class = LetterOpenerWeb::Letter
+    end
   end
 
   def self.config
