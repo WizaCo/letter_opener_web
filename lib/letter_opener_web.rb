@@ -7,10 +7,11 @@ require 'rexml/document'
 
 module LetterOpenerWeb
   class Config
-    attr_accessor :letters_location, :letter_class
+    attr_accessor :letters_location
+    attr_writer :letter_class
 
-    def initialize
-      @letter_class = LetterOpenerWeb::Letter
+    def letter_class
+      @letter_class ||= LetterOpenerWeb::Letter
     end
   end
 
